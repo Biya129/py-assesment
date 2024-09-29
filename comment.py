@@ -1,3 +1,8 @@
+class Reply:
+    def __init__(self, user, text):
+        self.user = user
+        self.text = text
+
 class Comment:
     def __init__(self, user, text):
         self.user = user
@@ -8,4 +13,4 @@ class Comment:
         if self.reply is None:
             self.reply = reply
         else:
-            print("Cannot add another reply.")    
+            print("Cannot add another reply.")

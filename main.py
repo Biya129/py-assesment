@@ -2,8 +2,7 @@ from channel import Channel
 from user import User
 from video import Video
 from shortvideo import ShortVideo
-from comment import Comment
-
+from comment import Comment, Reply
 
 if __name__ == "__main__":
     
@@ -19,10 +18,13 @@ if __name__ == "__main__":
 
     video1.like_video()
     comment1 = user2.post_comment(video1, "What an Informative Video!")
-
-    reply1 = user1.reply_to_comment(comment1, "Thank you so much!")
+    video1.add_comment(comment1)
+    
+    reply1 = Reply(user1, "Thank you so much!")
+    comment1.add_reply(reply1)
 
     video1.show_comments()
 
     channel1.display_subscribers()
+
 

@@ -15,3 +15,7 @@ class Video:
             print(f"{comment.user.username}: {comment.text}")
             if comment.reply:
                 print(f"  Reply -> {comment.reply.user.username}: {comment.reply.text}")
+
+    def add_comment(self, comment):
+        self.comments.append(comment)
+        print(f"Comment added: {comment.user.username}: {comment.text}")            
